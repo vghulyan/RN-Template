@@ -5,8 +5,11 @@ import {
   Text,
   View,
   StyleSheet,
+  ActivityIndicator,
+  Image,
 } from 'react-native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
+// import {Image} from '@rneui/themed';
 
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import GamingImg from './assets/images/gaming.svg';
@@ -39,8 +42,12 @@ const Main = ({navigation}) => {
       <View style={styles.labelContainer}>
         <Text style={styles.label}>LME!!!</Text>
       </View>
-      <View style={styles.gamingImageContainer}>
-        <GamingImg style={styles.gamingImage} width={300} height={300} />
+      <View>
+        <Image
+          source={require('./assets/images/dolphin.png')}
+          style={{width: 300, height: 200, marginBottom: 20}}
+          PlaceholderContent={<ActivityIndicator />}
+        />
       </View>
       <TouchableOpacity
         style={styles.button}
@@ -55,7 +62,9 @@ const Main = ({navigation}) => {
 const Home = () => {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Home Screen</Text>
+      <View style={styles.gamingImageContainer}>
+        <GamingImg style={styles.gamingImage} width={300} height={300} />
+      </View>
     </View>
   );
 };

@@ -114,11 +114,10 @@ npm i @react-navigation/native @react-navigation/native-stack @rneui/base @rneui
 
 <div>
 <p>
-    <img src="./assets/images/Screenshot%202022-10-31%20at%2019.17.51.png" width="300" height="500"/>
+    <img src="./assets/images/Screenshot 2022-10-31 at 19.51.20.png" width="300" height="500"/>
 </p>
-
 <p>
-    <img src=".//assets/images/Screenshot%202022-10-31%20at%2019.20.18.png" width="300" height="500"/>
+    <img src=".//assets/images/Screenshot 2022-10-31 at 19.53.42.png" width="300" height="500"/>
 </p>
 
 </div>
