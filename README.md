@@ -1,5 +1,6 @@
 ## Add in the <project root>/react-native.config.js
 
+```
 module.exports = {
 project: {
 ios: {},
@@ -7,6 +8,7 @@ android: {},
 },
 assets: ['./assets/fonts/'],
 };
+```
 
 ## --------------------------------------------
 
@@ -14,6 +16,7 @@ assets: ['./assets/fonts/'],
 
 ## Add <project root>/ios/info.plist
 
+```
 <key>UIAppFonts</key>
 <array>
 <string>AntDesign.ttf</string>
@@ -38,18 +41,23 @@ assets: ['./assets/fonts/'],
 <string>Trispace-VariableFont.ttf</string>
 <string>McLaren-Regular.ttf</string>
 </array>
+```
 
 ## --------------------------------------------
 
 ## Add <project root>/android/app/build.gradle
 
 At the end of the file >>>
+
+```
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+```
 
 ## --------------------------------------------
 
 ## Append <project root>/metro.config
 
+```
 const {getDefaultConfig} = require('metro-config');
 
 module.exports = (async () => {
@@ -66,30 +74,36 @@ sourceExts: [...sourceExts, 'svg'],
 },
 };
 })();
+```
 
 ## --------------------------------------------
 
 ## Copy fonts directory to <project root>/ios/fonts (from react vector icons)
 
+```
 AntDesdign.ttf
 Entypo.ttf
 Evilicons.ttf
 ...
 (Around 16 files)
+```
 
 ## --------------------------------------------
 
 ## Append at the end of the file: <project root>/android/app/src/main/java/com/<project name>/MainActivity.java
 
+```
 @Override
 protected void onCreate(Bundle savedInstanceState) {
 super.onCreate(null);
 }
+```
 
 ## --------------------------------------------
 
 ## Packages to install:
 
+```
 npm i @react-navigation/native @react-navigation/native-stack @rneui/base @rneui/themed react-native-safe-area-context react-native-screens react-native-svg react-native-svg-transformer react-native-vector-icons
 
 "@react-navigation/native": "^6.0.13",
@@ -103,12 +117,15 @@ npm i @react-navigation/native @react-navigation/native-stack @rneui/base @rneui
 "react-native-svg": "^13.4.0",
 "react-native-svg-transformer": "^1.0.0",
 "react-native-vector-icons": "^9.2.0"
+```
 
 ## --------------------------------------------
 
+```
 1. npx pod-install ios // pod install
 2. npx react-native-asset // link assets
 3. npx react-native run-ios // RUN
+```
 
 ## --------------------------------------------
 
